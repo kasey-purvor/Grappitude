@@ -1,5 +1,8 @@
 import React from 'react';
 import { Text, Button, TextInput, View } from 'react-native';
+
+// import {ProgressBar} from "./components/progress-bar.component";
+
 const App = () => {
   return (
     <View
@@ -20,10 +23,23 @@ const App = () => {
       <Button
         title="Submit"
         color='green'
-        
         >
       </Button>
+      <ProgressBar />
     </View>
   );
 }
+
+const ProgressBar = (props) => {
+  return (
+    <div className="progress-bar">
+      <Filler />
+    </div>
+  )
+}
+
+const Filler = (props) => {
+  return <div className="filler" />
+}
+
 export default App;

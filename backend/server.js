@@ -20,6 +20,13 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 });
 
+const thoughtsRouter = require('./routes/thoughts');
+
+
+app.use('/thoughts', thoughtsRouter);
+
+
+
 app.listen(port, () => {
 console.log( `Server is running on port: ${port}` );
 });

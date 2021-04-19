@@ -27,7 +27,7 @@ export default class DisplayThoughts extends Component {
     
     if (!this.state.thoughts.length) return null;
     const thoughtItems = this.state.thoughts.map((thoughtRecord) => 
-      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"] }; </li>
+      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,16) }; </li>
     );
 
     return thoughtItems;

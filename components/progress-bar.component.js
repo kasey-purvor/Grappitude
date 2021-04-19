@@ -1,46 +1,87 @@
-import React from 'react';
+import React,  { Component } from 'react';
 import { View } from 'react-native';
 import styles from './progress-bar.component.style';
 import axios from "axios";
 
+export default class ProgressBar extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      thoughts: [],
+      width: '0%'
+
+    }
+  }
+
 const customStyle = {
-  width: '0%'
+width: '10%'
 }
 
-var percentageWidth
+// var percentageWidth
 
-axios.get('http://localhost:5000/thoughts')
-.then((response) => {
-  const data = response.data;
-  console.log(data)
-  console.log(data.length)
-  var length = data.length
+  getThoughtsLength = () => {
+    axios.get('http://localhost:5000/thoughts')
+    .then((response) => {
+      const data = response.data;
+      console.log(data)
+      console.log(data.length)
+      return data.length
+      });
+  }
 
-  let myFunc = num => Number(num);
+  updateProgressBar = (num) => {
+    let arrOfNums = num => Number(num); //integer into arrays
+    var intArr = Array.from(String(length), arrOfNums); 
+    var num = intArr[1]
+    var output = num * 10
+    return output
+    // this.setState({ width: `${output}%` });
+  }
 
-  var intArr = Array.from(String(length), myFunc);
-
-  var num = intArr[1]
-  percentageWidth = num * 10
- 
+  render() {
+    return (
+      <View
+      style={[styles.filler, customStyle]}>
+        {this.getThoughtsLength()}
+      {this.updateProgressBar()}
+      
   
-  console.log(percentageWidth)
-})
+     </View>)}
+  
+}
 
-customStyle.width = `${percentageWidth}%`
+
+// customStyle.width = `${updateProgressBar()}%`
   
 
 // if date.length is 1, 11, 21, 31, 41 => width percentage should be 10%
 // if data.length is 2, 22, 32, 42 => width percentage should be 20%
 
-function ProgressBar() {
 
-    return (
-      // for some reason cant get both bar and filler to show 
-      <View style={[styles.filler, customStyle]}/>
-    )}
 
-export default ProgressBar
+
+
+// render() {
+//   return (
+//     <View
+//     style={{
+//       marginTop: 40,
+//       margin: 15
+//     }}>
+//       <Text
+//       style={{
+//         textAlign: 'center',
+//         marginTop: 20
+//       }}> 
+//             {this.getThoughts()}
+//             { this.listThoughts()}
+//             {/* { this.listThoughts(this.getThoughts())} */}
+//       </Text>
+//    </View>
+//   );
+// }
+// }
+
 
 
 // const styles = StyleSheet.create({

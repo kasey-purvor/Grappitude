@@ -16,8 +16,6 @@ export default class DisplayThoughts extends Component {
     then( (res) => {
       const data = res.data; //arr of hashes
       this.setState({ thoughts: data });
-      console.log(this.state.thoughts);
-      console.log('Thoughts received!');
     }).
     catch( () => {
       alert('Error retrieving data'); //update for production
@@ -29,19 +27,11 @@ export default class DisplayThoughts extends Component {
     
     if (!this.state.thoughts.length) return null;
     const thoughtItems = this.state.thoughts.map((thoughtRecord) => 
-      <li> {thoughtRecord["thought"]} </li>
+      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"] }; </li>
     );
 
     return thoughtItems;
   }
-  // listThoughts = (thoughts) => {
-  //   if (!thoughts.length) return null;
-  //   const thoughtItems = thoughts.map((thoughtRecord) => 
-  //     <li> {thoughtRecord["thought"]} </li>
-  //   );
-
-  //   return thoughtItems;
-  // }
 
 
   // render thought posts

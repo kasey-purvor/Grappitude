@@ -1,6 +1,7 @@
 import React,  { Component } from 'react';
-import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { Text, Button, TextInput, View } from 'react-native';
 import axios from "axios";
+import styles from './design.component.style';
 
 export default class CreateThought extends Component {
   constructor(props) {
@@ -31,27 +32,12 @@ export default class CreateThought extends Component {
 
   render() {
    return (
-     <View
-     style={{
-       marginTop: 40,
-       margin: 15
-     }}>
+     <View style={styles.mainview}>
        <Text
-       style={{
-         textAlign: 'center',
-         marginTop: 20
-       }}> What are you grateful for today?</Text>
+       style={styles.welcome}>
+          What are you grateful for today?</Text>
        <TextInput
-         style={{
-           height: 40,
-           textAlign: 'center',
-           marginRight: 75,
-           width: 200,
-           borderColor: '#B9DEA4',
-           borderWidth: 3,
-           marginTop: 10,
-           marginLeft: 75
-         }}
+         style={styles.textinput}
          placeholder="Type your thought here"
          value={this.state.thought}
          onChangeText={this.onChangeThought}

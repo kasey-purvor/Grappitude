@@ -20,17 +20,17 @@ export default class DisplayThoughts extends Component {
     catch( () => {
       alert('Error retrieving data'); //update for production
     });
-    
+
   }
   // convert JSON to thought posts
   listThoughts = () => {
-    
+
     if (!this.state.thoughts.length) return null;
-    const thoughtItems = this.state.thoughts.map((thoughtRecord) => 
-      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,16) }; </li>
+    const thoughtItems = this.state.thoughts.map((thoughtRecord) =>
+      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,10)} {thoughtRecord["createdAt"].slice(11,16)}<br/> </li>
     );
 
-    return thoughtItems;
+    return thoughtItems.reverse();
   }
 
 
@@ -46,7 +46,7 @@ export default class DisplayThoughts extends Component {
         style={{
           textAlign: 'center',
           marginTop: 20
-        }}> 
+        }}>
               {this.getThoughts()}
               { this.listThoughts()}
               {/* { this.listThoughts(this.getThoughts())} */}

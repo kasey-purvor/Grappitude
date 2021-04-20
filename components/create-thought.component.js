@@ -16,6 +16,7 @@ export default class CreateThought extends Component {
       thought: thought
     });
   }
+  
   onSubmit(e) {
     e.preventDefault();
     const newthought = {

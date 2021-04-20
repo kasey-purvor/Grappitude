@@ -15,13 +15,17 @@ const AppContainer = () => {
     .then((response) => {
       const data = response.data;
       const length = data.length
-      const array = Array.from(String(length), Number)
-      const num = array[1]
-      const output = num * 10
-
-      setProgressBarWidth(`${output}%`);
+      if (length === 0) {
+        var output = 0
+      } else if (length % 10 === 0 && length != 0) {
+        var output = 100
+      } else {
+      var output = (length % 10) * 10;
+      };
+      setProgressBarWidth(`${output}%`)
     });
   }
+
 
   const afterThoughtCreated = (data) => {
     // We choose to do nothing with the data argument

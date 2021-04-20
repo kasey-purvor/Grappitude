@@ -11,7 +11,7 @@ export default class DisplayThoughts extends Component {
   }
 
   getThoughts = () => {
-    axios.get('http://192.168.0.28:5000/thoughts').
+    axios.get('http://localhost:5000/thoughts').
     then( (res) => {
       const data = res.data;
       this.setState({ thoughts: data });

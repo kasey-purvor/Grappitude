@@ -23,13 +23,16 @@ export default class DisplayThoughts extends Component {
 
   }
   // convert JSON to thought posts
-  listThoughts = () => {
+  
 
+  listThoughts = () => {
     if (!this.state.thoughts.length) return null;
     const thoughtItems = this.state.thoughts.map((thoughtRecord) =>
-      <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,10)} {thoughtRecord["createdAt"].slice(11,16)}<br/> </li>
+      <li key={thoughtRecord["_id"]}>
+      {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,10)} {thoughtRecord["createdAt"].slice(11,16)}
+      <br/><br/>
+      </li>
     );
-
     return thoughtItems.reverse();
   }
 

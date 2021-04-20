@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import { Text, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import axios from "axios";
 
 export default class DisplayThoughts extends Component {
@@ -10,49 +10,52 @@ export default class DisplayThoughts extends Component {
     }
   }
 
-  // get thoughts from DB
   getThoughts = () => {
     axios.get('http://localhost:5000/thoughts').
     then( (res) => {
-      const data = res.data; //arr of hashes
+      const data = res.data;
       this.setState({ thoughts: data });
     }).
     catch( () => {
-      alert('Error retrieving data'); //update for production
+      alert('Error retrieving data');
     });
-
-  }
-  // convert JSON to thought posts
-  
-
-  listThoughts = () => {
-    if (!this.state.thoughts.length) return null;
-    const thoughtItems = this.state.thoughts.map((thoughtRecord) =>
-      <li key={thoughtRecord["_id"]}>
-      {thoughtRecord["thought"]} {thoughtRecord["createdAt"].slice(0,10)} {thoughtRecord["createdAt"].slice(11,16)}
-      <br/><br/>
-      </li>
-    );
-    return thoughtItems.reverse();
   }
 
-
-  // render thought posts
   render() {
+
     return (
       <View
       style={{
         marginTop: 40,
-        margin: 15
+        margin: 15,
+        marginBottom: 40
       }}>
         <Text
         style={{
           textAlign: 'center',
-          marginTop: 20
+          marginTop: 20,
+          marginBottom: 40
         }}>
+
               {this.getThoughts()}
-              { this.listThoughts()}
-              {/* { this.listThoughts(this.getThoughts())} */}
+
+              <View style={{
+                marginBottom: 40
+              }}>
+              <FlatList
+                data={this.state.thoughts.slice().reverse()}
+                renderItem={({item}) => <Text style={{
+                  textAlign: "center",
+                  alignItems: "center",
+                  alignSelf: "center",
+                  marginBottom: 40
+                }}>{item["thought"]}{"\n"}
+                {item["createdAt"].slice(8,10)}
+                {item["createdAt"].slice(4,8)}
+                {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
+                keyExtractor={(item, index) => {return index.toString()}}
+              />
+              </View>
         </Text>
      </View>
     );

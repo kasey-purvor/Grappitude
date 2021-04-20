@@ -61,28 +61,7 @@ export default class CreateThought extends Component {
          color='black'
          onPress={this.onSubmit}
          />
-       <View style={styles.progressBar}>
-         <View style={styles.filler} />
-       </View>
      </View>
    );
  }
 }
-const styles = StyleSheet.create({
-  progressBar: {
-    marginTop: 20,
-    height: 40,
-    width: 350,
-    borderRadius: 10,
-    borderWidth: 5,
-    borderColor: '#B9DEA4'
-  },
-
-  filler: {
-    backgroundColor: '#CFCFCF',
-    height: 30,
-    borderWidth: 15,
-    borderRadius: 5,
-    borderColor: '#CFCFCF'
-  }
-})

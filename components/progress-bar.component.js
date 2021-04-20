@@ -23,15 +23,18 @@ export default class ProgressBar extends Component {
     axios.get('http://localhost:5000/thoughts')
     .then((response) => {
       const data = response.data;
-      console.log(data)
-      console.log(data.length)
       const length = data.length
-      const array = Array.from(String(length), Number)
-      console.log(array)
-      var num = array[1]
-      var output = num * 10
-       this.setState({ width: `${output}%` });
-      });
+      if (length === 0) {
+        var barWidth = 0
+      } else if (length % 10 === 0 && length != 0) {
+        var barWidth = 100
+      } else {
+      var barWidth = (length % 10) * 10;
+      };
+      this.setState({ width: `${barWidth}%` })
+      console.log(barWidth)
+      console.log(this.state.width)
+    });
   }
 
   updateUserLevel = () => {
@@ -43,17 +46,6 @@ export default class ProgressBar extends Component {
     });
   }
   
-
-  // updateProgressBar = (num) => {
-  //   let arrOfNums = num => Number(num); //integer into arrays
-  //   var intArr = Array.from(String(length), arrOfNums); 
-  //   var num = intArr[1]
-  //   console.log(num)
-  //   var output = num * 10
-  //   this.setState({ width: `${output}%` });
-  // }
-
-
   render() {
     return (
       <View 

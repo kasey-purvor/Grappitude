@@ -1,6 +1,6 @@
 import React,  { Component } from 'react';
 import { View } from 'react-native';
-import styles from './progress-bar.component.style';
+import styles from './design.component.style';
 import axios from "axios";
 
 export default class ProgressBar extends Component {

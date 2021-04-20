@@ -1,5 +1,6 @@
 import React,  { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
+import styles from './progress-bar.component.style';
 import styles from './design.component.style';
 import axios from "axios";
 
@@ -7,13 +8,14 @@ export default class ProgressBar extends Component {
    constructor(props) {
     super(props);
     this.state = {
-      width: '0%'
-
+      width: '0%',
+      level: 0
     }
   }
 
   componentDidMount() {
     this.getThoughtsLength()
+    this.updateUserLevel();
     // this.updateProgressBar()
   }
 
@@ -29,11 +31,17 @@ export default class ProgressBar extends Component {
       var num = array[1]
       var output = num * 10
        this.setState({ width: `${output}%` });
-
-
       });
   }
 
+  updateUserLevel = () => {
+    axios.get('http://localhost:5000/thoughts')
+    .then((response) => {
+      const data = response.data;
+      var level = Math.floor(data.length / 10);
+      this.setState({ level: level });
+    });
+  }
   
 
   // updateProgressBar = (num) => {
@@ -48,12 +56,27 @@ export default class ProgressBar extends Component {
 
   render() {
     return (
-
       <View 
-      style={[styles.filler, {width: this.state.width}]}>
-      
-  
-     </View>)}
+      style={{
+        borderWidth: 3,
+        borderColor: '#B9DEA4'
+      }}>
+        <Text 
+        style={{
+          textAlign: 'center'
+          
+        }}>
+          Gratidute Level:{this.state.level}
+        </Text>
+        <View 
+          style={[styles.filler, {
+          width: this.state.width,
+          }]}
+        >
+        </View>
+      </View>
+    )
+  }
   
 }
 

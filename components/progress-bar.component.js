@@ -7,17 +7,15 @@ export default class ProgressBar extends Component {
    constructor(props) {
     super(props);
     this.state = {
-      thoughts: [],
       width: '0%'
 
     }
   }
 
-const customStyle = {
-width: '10%'
-}
-
-// var percentageWidth
+  componentDidMount() {
+    this.getThoughtsLength()
+    // this.updateProgressBar()
+  }
 
   getThoughtsLength = () => {
     axios.get('http://localhost:5000/thoughts')
@@ -25,30 +23,41 @@ width: '10%'
       const data = response.data;
       console.log(data)
       console.log(data.length)
-      return data.length
+      const length = data.length
+      const array = Array.from(String(length), Number)
+      console.log(array)
+      var num = array[1]
+      var output = num * 10
+       this.setState({ width: `${output}%` });
+
+
       });
   }
 
-  updateProgressBar = (num) => {
-    let arrOfNums = num => Number(num); //integer into arrays
-    var intArr = Array.from(String(length), arrOfNums); 
-    var num = intArr[1]
-    var output = num * 10
-    return output
-    // this.setState({ width: `${output}%` });
-  }
+  
+
+  // updateProgressBar = (num) => {
+  //   let arrOfNums = num => Number(num); //integer into arrays
+  //   var intArr = Array.from(String(length), arrOfNums); 
+  //   var num = intArr[1]
+  //   console.log(num)
+  //   var output = num * 10
+  //   this.setState({ width: `${output}%` });
+  // }
+
 
   render() {
     return (
-      <View
-      style={[styles.filler, customStyle]}>
-        {this.getThoughtsLength()}
-      {this.updateProgressBar()}
+
+      <View 
+      style={[styles.filler, {width: this.state.width}]}>
       
   
      </View>)}
   
 }
+
+
 
 
 // customStyle.width = `${updateProgressBar()}%`

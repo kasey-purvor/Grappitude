@@ -18,10 +18,6 @@ export default class CreateThought extends Component {
   }
   onSubmit(e) {
     e.preventDefault();
-    //
-    // axios.get('https://type.fit/api/quotes')
-    //   .then(response => console.log(response));
-    // window.location = '/';
 
 
   return fetch('https://type.fit/api/quotes')
@@ -31,8 +27,6 @@ export default class CreateThought extends Component {
       const positiveText = positiveQuote.text
       const positiveAuthor = positiveQuote.author
 
-
-      console.log(positiveQuote)
       alert(`${positiveText}` + ` - ${positiveAuthor}`)
     })
     .catch((error) => {
@@ -40,8 +34,6 @@ export default class CreateThought extends Component {
     });
 
   }
-
-  // render form and submit button here
 
   render() {
    return (

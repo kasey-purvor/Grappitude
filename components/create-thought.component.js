@@ -23,11 +23,15 @@ export default class CreateThought extends Component {
     }
     console.log(newthought);
     axios.post('http://localhost:5000/thoughts/add', newthought)
-      .then(res => console.log(res.data));
-    window.location = '/';
-  }
+      .then(res => {
+        const { afterThoughtCreated } = this.props
 
-  // render form and submit button here
+        if(afterThoughtCreated){
+          afterThoughtCreated(res.data)
+        }
+      });
+      this.state.thought = ""
+  }
 
   render() {
    return (

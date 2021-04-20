@@ -3,65 +3,20 @@ import { View } from 'react-native';
 import styles from './progress-bar.component.style';
 import axios from "axios";
 
-export default class ProgressBar extends Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      width: '0%'
+const ProgressBar = ({ progressBarWidth }) => {
 
-    }
-  }
-
-  componentDidMount() {
-    this.getThoughtsLength()
-    // this.updateProgressBar()
-  }
-
-  getThoughtsLength = () => {
-    axios.get('http://localhost:5000/thoughts')
-    .then((response) => {
-      const data = response.data;
-      console.log(data)
-      console.log(data.length)
-      const length = data.length
-      const array = Array.from(String(length), Number)
-      console.log(array)
-      var num = array[1]
-      var output = num * 10
-       this.setState({ width: `${output}%` });
-
-
-      });
-  }
-
-  
-
-  // updateProgressBar = (num) => {
-  //   let arrOfNums = num => Number(num); //integer into arrays
-  //   var intArr = Array.from(String(length), arrOfNums); 
-  //   var num = intArr[1]
-  //   console.log(num)
-  //   var output = num * 10
-  //   this.setState({ width: `${output}%` });
-  // }
-
-
-  render() {
-    return (
-
-      <View 
-      style={[styles.filler, {width: this.state.width}]}>
-      
-  
-     </View>)}
-  
+  return (
+    <View style={[styles.filler, {width: progressBarWidth}]}/>
+  )
 }
+
+export default ProgressBar
 
 
 
 
 // customStyle.width = `${updateProgressBar()}%`
-  
+
 
 // if date.length is 1, 11, 21, 31, 41 => width percentage should be 10%
 // if data.length is 2, 22, 32, 42 => width percentage should be 20%
@@ -81,7 +36,7 @@ export default class ProgressBar extends Component {
 //       style={{
 //         textAlign: 'center',
 //         marginTop: 20
-//       }}> 
+//       }}>
 //             {this.getThoughts()}
 //             { this.listThoughts()}
 //             {/* { this.listThoughts(this.getThoughts())} */}
@@ -102,7 +57,7 @@ export default class ProgressBar extends Component {
 //       borderWidth: 5,
 //       borderColor: '#B9DEA4'
 //     },
-  
+
 //     filler: {
 //       backgroundColor: '#CFCFCF',
 //       height: 30,

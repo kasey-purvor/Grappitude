@@ -42,12 +42,7 @@ const AppContainer = () => {
     <Level healthLevel={healthLevel}/>
     <ProgressBar progressBarWidth={progressBarWidth}/>
     <InspireMe />
-    <View style={{
-      alignSelf: "center",
-      marginBottom: 40
-    }}>
-      <DisplayThoughts />
-    </View>
+    <DisplayThoughts />
     </View>
   )
 }

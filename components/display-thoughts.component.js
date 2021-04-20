@@ -25,39 +25,25 @@ export default class DisplayThoughts extends Component {
 
     return (
       <View
-      style={{
-        marginTop: 40,
-        margin: 15,
-        marginBottom: 40
-      }}>
-        <Text
         style={{
-          textAlign: 'center',
-          marginTop: 20,
-          marginBottom: 40
+          marginTop: 40,
+          margin: 150,
+          marginBottom: 0
         }}>
+        {this.getThoughts()}
 
-              {this.getThoughts()}
-
-              <View style={{
-                marginBottom: 40
-              }}>
-              <FlatList
-                data={this.state.thoughts.slice().reverse()}
-                renderItem={({item}) => <Text style={{
-                  textAlign: "center",
-                  alignItems: "center",
-                  alignSelf: "center",
-                  marginBottom: 40
-                }}>{item["thought"]}{"\n"}
-                {item["createdAt"].slice(8,10)}
-                {item["createdAt"].slice(4,8)}
-                {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
-                keyExtractor={(item, index) => {return index.toString()}}
-              />
-              </View>
-        </Text>
-     </View>
+          <FlatList
+            data={this.state.thoughts.slice().reverse()}
+            renderItem={({item}) => <Text style={{
+              textAlign: "center",
+              marginBottom: 10
+            }}>{item["thought"]}{"\n"}
+            {item["createdAt"].slice(8,10)}
+            {item["createdAt"].slice(4,8)}
+            {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
+            keyExtractor={(item, index) => {return index.toString()}}
+          />
+      </View>
     );
   }
 }

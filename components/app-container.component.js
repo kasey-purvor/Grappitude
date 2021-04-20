@@ -16,7 +16,8 @@ const AppContainer = () => {
     axios.get('http://localhost:5000/thoughts')
     .then((response) => {
       const data = response.data;
-      const length = data.length
+      const length = data.length;
+      const level = Math.floor(data.length / 10);
       if (length === 0) {
         var output = 0
       } else if (length % 10 === 0 && length != 0) {
@@ -25,7 +26,7 @@ const AppContainer = () => {
       var output = (length % 10) * 10;
       };
       setProgressBarWidth(`${output}%`)
-      setHealthLevel(`${output}/100`)
+      setHealthLevel(`${level}`)
     });
   }
 

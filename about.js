@@ -5,7 +5,7 @@ You are encouraged to enter a thought on a daily basis so that you can reflect o
 Thoughts entered are recorded and count towards your progress, which is shown in the progress bar.\n
 When the bar is filled up, your user level will increase. Each level requires 10 thoughts to progress further.\n
 When you reach level 100... just keep on being grateful :)\n
-Struggling to think of a thought?  Hit the 'Inspire Me' button for some inspiration!\n\n
+Are you grappling with what to post?  Hit the 'Inspire Me' button to see what others have thought!\n\n
 Happy Grappituding!\n\n
 Creators:\n`
 

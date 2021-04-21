@@ -9,7 +9,6 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const thought = req.body.thought;
-
   const newThought = new Thought({
     thought,
   });

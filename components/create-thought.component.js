@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import { Text, Button, TextInput, View } from 'react-native';
+import { Text, Button, TextInput, View, Alert } from 'react-native';
 import axios from "axios";
 import styles from './design.component.style';
 
@@ -17,7 +17,7 @@ export default class CreateThought extends Component {
       thought: thought
     });
   }
-  
+
   onSubmit(e) {
     e.preventDefault();
     const newthought = {
@@ -32,6 +32,7 @@ export default class CreateThought extends Component {
           afterThoughtCreated(res.data)
         }
       });
+      Alert.alert("Your thought has been submitted")
       this.state.thought = ""
   }
 

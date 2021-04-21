@@ -22,6 +22,18 @@ export default class DisplayThoughts extends Component {
     });
   }
 
+  timeCheck = (timeString) => {
+    if(timeString === "23") {
+      return "00"
+    } else {
+      if(Number(timeString) < 10) {
+        return `0${(Number(timeString) + 1).toString()}`
+      } else {
+      return (Number(timeString) + 1).toString()
+    }
+  }
+}
+
   render() {
 
     return (

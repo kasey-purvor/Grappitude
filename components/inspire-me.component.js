@@ -1,21 +1,14 @@
 import React,  { Component } from 'react';
-import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { Text, Button, TextInput, View, StyleSheet, Alert } from 'react-native';
 import axios from "axios";
 import styles from './design.component.style';
 export default class CreateThought extends Component {
+
   constructor(props) {
     super(props);
-    this.onChangeThought = this.onChangeThought.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.state = {
-      thought: '',
-    }
   }
-  onChangeThought(thought) {
-    this.setState({
-      thought: thought
-    });
-  }
+
   onSubmit(e) {
     e.preventDefault();
 
@@ -27,7 +20,7 @@ export default class CreateThought extends Component {
       const positiveText = positiveQuote.text
       const positiveAuthor = positiveQuote.author
 
-      alert(`${positiveText}` + ` - ${positiveAuthor}`)
+      Alert.alert(`${positiveText}` + ` - ${positiveAuthor}`)
     })
     .catch((error) => {
       console.error(error);

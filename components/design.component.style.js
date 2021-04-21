@@ -28,6 +28,12 @@ export default StyleSheet.create({
     }
   },
 
+  buttonviewtwo: {
+    marginTop: 10,
+    width: 150,
+    marginLeft: '30%',
+  },
+
   titlequestion: {
     textAlign: 'center',
      fontSize: 45,
@@ -35,7 +41,7 @@ export default StyleSheet.create({
      textShadowColor: '#6EC0D4',
      textShadowOffset: {width: -1, height: 2},
      textShadowRadius: 0,
-     marginTop: 30
+     marginTop: 0
   },
 
   thoughtinput: {

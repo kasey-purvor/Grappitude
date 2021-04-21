@@ -64,7 +64,7 @@ textinput: {
     marginBottom: 0
   },
 
-  thoughtsTextStyle: {
+  thoughtsText: {
     textAlign: "center",
     marginBottom: 10
   },

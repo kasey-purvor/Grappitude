@@ -53,7 +53,8 @@ const AppContainer = () => {
               <ProgressBar progressBarWidth={progressBarWidth}/>
               <InspireMe />
 
-        <View style={{ height: 150}}>
+        <View style={{ height: 150}}> 
+        {/* Can only have one component in scroll (i.e. display thoughts) */}
             <ScrollView>
               <DisplayThoughts />
             </ScrollView>

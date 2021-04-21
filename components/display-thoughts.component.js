@@ -1,7 +1,6 @@
 import React,  { Component } from 'react';
 import { FlatList, ScrollView, Text, View } from 'react-native';
 import styles from './design.component.style';
-import sampleData from './sampleData'
 import axios from "axios";
 
 export default class DisplayThoughts extends Component {
@@ -27,17 +26,13 @@ export default class DisplayThoughts extends Component {
     });
   }
 
+  updateDate = (date) => {
+    return new Date (date); // outputs: Thu Apr 15 2021 16:39:32 GMT+0100 (British Summer Time)
+    // let date = new Date ("2021-04-15T15:39:32.113Z");
+    // return date.toLocaleString('en-GB', { timeZone: 'UTC' })
 
-  // viewThoughts = (data) => {
-  //   if (!data.length) return null;
+  }
 
-  //   const dataItems = this.state.thoughts.map((thoughtRecord) => 
-  //   <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"] }; </li>
-  //   );
-    
-  //   console.log( thoughtItems);
-  // }
-  
   render() {
     
     return (
@@ -47,11 +42,19 @@ export default class DisplayThoughts extends Component {
           { this.state.thoughts.slice().reverse().map(
             item => (
               <View key={item._id}>
-                <Text> {item.thought}</Text>
-                <Text> {item.createdAt}</Text>
+                <Text style={ styles.thoughtsText }> {item.thought}</Text>
+                <Text style={ styles.thoughtsText }> {item.createdAt}</Text>
               </View>
             ))
           }
+          {/* { this.state.thoughts.slice().reverse().map(
+            item => (
+              <View key={item._id}>
+                <Text style={ styles.thoughtsText }> {item.thought}</Text>
+                <Text style={ styles.thoughtsText }> {item.createdAt}</Text>
+              </View>
+            ))
+          } */}
         {/* </ScrollView> */}
 
       </View>

@@ -1,17 +1,16 @@
 import React,  { Component } from 'react';
 import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
-
+import myText from './../about.js'
 
 export default class AboutMe extends Component {
   constructor(props) {
-    super(props);
-    this.onSubmit = this.onSubmit.bind(this);
+    super(props); 
   }
-
+  
   onSubmit(e) {
     e.preventDefault();
-    alert('This is info about our app')
-}
+    alert(myText);
+  }
 
   render() {
    return (

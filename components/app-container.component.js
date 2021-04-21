@@ -2,11 +2,13 @@ import React, { Component, useState } from 'react';
 import { FlatList, Text, Button, TextInput, View, StyleSheet } from 'react-native';
 import axios from "axios";
 
+import AboutMe from "./about-me.component";
 import CreateThought from "./create-thought.component";
 import InspireMe   from "./inspire-me.component";
 import ProgressBar from "./progress-bar.component";
 import Level from "./level.component";
 import DisplayThoughts from "./display-thoughts.component";
+
 
 const AppContainer = () => {
   const [progressBarWidth, setProgressBarWidth] = useState(0)
@@ -38,6 +40,7 @@ const AppContainer = () => {
 
   return (
     <View>
+    <AboutMe />
     <CreateThought afterThoughtCreated={afterThoughtCreated}/>
     <Level healthLevel={healthLevel}/>
     <ProgressBar progressBarWidth={progressBarWidth}/>

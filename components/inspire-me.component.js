@@ -1,21 +1,13 @@
 import React,  { Component } from 'react';
 import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
-import axios from "axios";
 
-export default class CreateThought extends Component {
+
+export default class InspireMe extends Component {
   constructor(props) {
     super(props);
-    this.onChangeThought = this.onChangeThought.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.state = {
-      thought: '',
-    }
   }
-  onChangeThought(thought) {
-    this.setState({
-      thought: thought
-    });
-  }
+
   onSubmit(e) {
     e.preventDefault();
 

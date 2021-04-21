@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { FlatList, Text, Button, TextInput, ScrollView, View, StyleSheet } from 'react-native';
 import axios from "axios";
 
 import CreateThought from "./create-thought.component";
@@ -42,7 +42,9 @@ const AppContainer = () => {
     <Level healthLevel={healthLevel}/>
     <ProgressBar progressBarWidth={progressBarWidth}/>
     <InspireMe />
+    <View>
     <DisplayThoughts />
+    </View>
     </View>
   )
 }

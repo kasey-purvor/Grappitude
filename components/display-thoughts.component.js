@@ -27,7 +27,7 @@ export default class DisplayThoughts extends Component {
       <View
         style={{
           marginTop: 40,
-          margin: 150,
+          margin: 10,
           marginBottom: 0
         }}>
         {this.getThoughts()}

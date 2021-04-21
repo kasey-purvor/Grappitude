@@ -39,19 +39,21 @@ export default class CreateThought extends Component {
    return (
      <View style={styles.mainview}>
        <Text
-       style={styles.welcome}>
+       style={styles.titlequestion}>
           What are you grateful for today?</Text>
        <TextInput
-         style={styles.textinput}
+         style={styles.thoughtinput}
          placeholder="Type your thought here"
          value={this.state.thought}
          onChangeText={this.onChangeThought}
        />
-       <Button
+       <View style={styles.buttonview}>
+         <Button
          title="Submit"
-         color='#F7C9B6'
+         color='#6EC0D4'
          onPress={this.onSubmit}
          />
+         </View>
      </View>
    );
  }

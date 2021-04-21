@@ -48,10 +48,7 @@ const AppContainer = () => {
         <ProgressBar progressBarWidth={progressBarWidth}/>
         <InspireMe />
         <View 
-          style={{
-          alignSelf: "center",
-          marginBottom: 40
-          }}>
+          style={styles.thoughtdisplay}>
         <DisplayThoughts />
         </View>
       </View>

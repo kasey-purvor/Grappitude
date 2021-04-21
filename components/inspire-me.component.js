@@ -1,7 +1,7 @@
 import React,  { Component } from 'react';
 import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
 import axios from "axios";
-
+import styles from './design.component.style';
 export default class CreateThought extends Component {
   constructor(props) {
     super(props);
@@ -37,15 +37,11 @@ export default class CreateThought extends Component {
 
   render() {
    return (
-     <View
-     style={{
-       marginTop: 40,
-       margin: 15
-     }}>
+     <View style={styles.buttonview}>
        <Button
          title="Inspire Me"
-         color='blue'
          onPress={this.onSubmit}
+         color='#6EC0D4'
          />
      </View>
    );

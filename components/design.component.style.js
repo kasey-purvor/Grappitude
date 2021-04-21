@@ -54,8 +54,21 @@ textinput: {
            marginLeft: 40,
 },
 
-image: {
-  width: '100%',
-}
+  image: {
+    width: '100%',
+  },
+
+  thoughtsStyle: {
+    marginTop: 40,
+    margin: 10,
+    marginBottom: 0
+  },
+
+  thoughtsTextStyle: {
+    textAlign: "center",
+    marginBottom: 10
+  },
+
+
 
   })

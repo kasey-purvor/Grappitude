@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Text, Button, TextInput, View, StyleSheet, Image } from 'react-native';
+import { FlatList, Text, Button, TextInput, View, StyleSheet, Image, ScrollView } from 'react-native';
 import axios from "axios";
 
 import styles from './design.component.style';
@@ -42,22 +42,19 @@ const AppContainer = () => {
   
   return (
       <View>
-        <Image source={require("../assets/header.png")} style={styles.image}/>
+        {/* <Image source={require("../assets/header.png")} style={styles.image}/>
           <Text style={styles.title}>
            Grappitude
           </Text>
         <AboutMe />
-        <CreateThought afterThoughtCreated={afterThoughtCreated}/>
-        <Level healthLevel={healthLevel}/>
-        <ProgressBar progressBarWidth={progressBarWidth}/>
-        <InspireMe />
-        <View 
-          style={{
-          alignSelf: "center",
-          marginBottom: 40
-          }}>
-        <DisplayThoughts />
-        </View>
+      
+          <CreateThought afterThoughtCreated={afterThoughtCreated}/>
+          <Level healthLevel={healthLevel}/> */}
+          <ProgressBar progressBarWidth={progressBarWidth}/>
+          <InspireMe />
+
+          <DisplayThoughts />
+
       </View>
   )
 }

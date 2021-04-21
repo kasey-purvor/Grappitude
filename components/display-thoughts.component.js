@@ -1,5 +1,7 @@
 import React,  { Component } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, ScrollView, Text, View } from 'react-native';
+import styles from './design.component.style';
+import sampleData from './sampleData'
 import axios from "axios";
 
 export default class DisplayThoughts extends Component {
@@ -8,6 +10,10 @@ export default class DisplayThoughts extends Component {
     this.state = {
       thoughts: []
     }
+  }
+
+  componentDidMount = () => {
+    this.getThoughts()
   }
 
   getThoughts = () => {
@@ -21,40 +27,34 @@ export default class DisplayThoughts extends Component {
     });
   }
 
-  timeCheck = (timeString) => {
-    if(timeString === "23") {
-      return "00"
-    } else {
-      if(Number(timeString) < 10) {
-        return `0${(Number(timeString) + 1).toString()}`
-      } else {
-      return (Number(timeString) + 1).toString()
-    }
-  }
-}
 
+  // viewThoughts = (data) => {
+  //   if (!data.length) return null;
+
+  //   const dataItems = this.state.thoughts.map((thoughtRecord) => 
+  //   <li> {thoughtRecord["thought"]} {thoughtRecord["createdAt"] }; </li>
+  //   );
+    
+  //   console.log( thoughtItems);
+  // }
+  
   render() {
-
+    
     return (
       <View
-        style={{
-          marginTop: 40,
-          margin: 10,
-          marginBottom: 0
-        }}>
-        {this.getThoughts()}
+      style={ styles.thoughtsStyle }>
 
-          <FlatList
-            data={this.state.thoughts.slice().reverse()}
-            renderItem={({item}) => <Text style={{
-              textAlign: "center",
-              marginBottom: 10
-            }}>{item["thought"]}{"\n"}
-            {item["createdAt"].slice(8,10)}
-            {item["createdAt"].slice(4,8)}
-            {item["createdAt"].slice(0,4)} {this.timeCheck(item["createdAt"].slice(11,13))}{item["createdAt"].slice(13,16)}</Text>}
-            keyExtractor={(item, index) => {return index.toString()}}
-          />
+        <ScrollView>
+          { this.state.thoughts.slice().reverse().map(
+            item => (
+              <View key={item._id}>
+                <Text> {item.thought}</Text>
+                <Text> {item.createdAt}</Text>
+              </View>
+            ))
+          }
+        </ScrollView>
+
       </View>
     );
   }

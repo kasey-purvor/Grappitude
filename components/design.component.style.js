@@ -7,16 +7,17 @@ bar: {
       width: '100%',
       borderRadius: 10,
       borderWidth: 5,
-      borderColor: '#B9DEA4'
+      borderColor: '#6EC0D4'
     },
   
 filler: {
-      backgroundColor: '#CFCFCF',
       height: 30,
       // width: '50%',
       borderWidth: 15,
       borderRadius: 5,
-      borderColor: '#CFCFCF'
+      borderColor: '#EFCABA',
+      position: 'absolute',
+      marginTop: 25
     },
   
 mainview: {
@@ -24,20 +25,37 @@ mainview: {
     margin: 15
 },
 
+title: {
+  position: 'absolute',
+  justifyContent: 'center', 
+  alignItems: 'center',
+  marginTop: 60
+},
+
 welcome: {
         textAlign: 'center',
-         marginTop: 20
+        color: '#EFCABA',
+         marginTop: 20,
+         fontSize: 50,
+         textShadowColor: '#6EC0D4',
+         textShadowOffset: {width: -1, height: 2},
+         textShadowRadius: 0
 },
 
 textinput: {
-           height: 40,
+           height: 90,
            textAlign: 'center',
            marginRight: 75,
-           width: 200,
-           borderColor: '#B9DEA4',
-           borderWidth: 3,
-           marginTop: 10,
-           marginLeft: 75
+           width: '80%',
+           borderColor: '#6EC0D4',
+           borderRadius: 10,
+           borderWidth: 1,
+           marginTop: 60,
+           marginLeft: 40,
+},
+
+image: {
+  width: '100%',
 }
 
   })

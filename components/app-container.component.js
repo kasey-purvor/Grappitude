@@ -1,6 +1,8 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { FlatList, Text, Button, TextInput, View, StyleSheet, Image } from 'react-native';
 import axios from "axios";
+
+import styles from './design.component.style';
 
 import AboutMe from "./about-me.component";
 import CreateThought from "./create-thought.component";
@@ -37,21 +39,26 @@ const AppContainer = () => {
     // But I'm leaving it as a reminder that we *can*
     getThoughtsLength()
   }
-
+  
   return (
-    <View>
-    <AboutMe />
-    <CreateThought afterThoughtCreated={afterThoughtCreated}/>
-    <Level healthLevel={healthLevel}/>
-    <ProgressBar progressBarWidth={progressBarWidth}/>
-    <InspireMe />
-    <View style={{
-      alignSelf: "center",
-      marginBottom: 40
-    }}>
-      <DisplayThoughts />
-    </View>
-    </View>
+      <View>
+        <Image source={require("../assets/header.png")} style={styles.image}/>
+          <Text style={styles.title}>
+           Grappitude
+          </Text>
+        <AboutMe />
+        <CreateThought afterThoughtCreated={afterThoughtCreated}/>
+        <Level healthLevel={healthLevel}/>
+        <ProgressBar progressBarWidth={progressBarWidth}/>
+        <InspireMe />
+        <View 
+          style={{
+          alignSelf: "center",
+          marginBottom: 40
+          }}>
+        <DisplayThoughts />
+        </View>
+      </View>
   )
 }
 

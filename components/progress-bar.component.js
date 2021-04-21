@@ -6,8 +6,10 @@ import axios from "axios";
 
 const ProgressBar = ({ progressBarWidth }) => {
 
-  return (
-    <View style={[styles.filler, {width: progressBarWidth}]}/>
+  return (  
+      <View><View style={[styles.filler, {width: progressBarWidth}]}/>
+      <View style={styles.bar}/>
+      </View>
   )
 
 }

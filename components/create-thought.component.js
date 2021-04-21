@@ -49,7 +49,7 @@ export default class CreateThought extends Component {
        />
        <Button
          title="Submit"
-         color='black'
+         color='#F7C9B6'
          onPress={this.onSubmit}
          />
      </View>

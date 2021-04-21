@@ -11,7 +11,7 @@ bar: {
     },
   
 filler: {
-      backgroundColor: '#CFCFCF',
+      backgroundColor: 'black',
       height: 30,
       // width: '50%',
       borderWidth: 15,

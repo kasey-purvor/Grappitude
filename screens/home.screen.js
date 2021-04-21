@@ -43,6 +43,7 @@ const HomeScreen = () => {
 
   return (
       <View>
+      {getThoughtsLength()}
         <Image source={require("../assets/header.png")} style={styles.image}/>
           <Text style={styles.title}>
            Grappitude

@@ -42,26 +42,22 @@ const AppContainer = () => {
   
   return (
       <View>
-        <ScrollView>
-        <SafeAreaView>
             <Image source={require("../assets/header.png")} style={styles.image}/>
-              <Text style={styles.title}>
+              {/* <Text style={styles.title}>
               Grappitude
               </Text>
             <AboutMe />
-          
+           */}
               <CreateThought afterThoughtCreated={afterThoughtCreated}/>
-            <ScrollView>
-              {/* <SafeAreaView> */}
               <Level healthLevel={healthLevel}/>
               <ProgressBar progressBarWidth={progressBarWidth}/>
               <InspireMe />
 
+        <View style={{ height: 150}}>
+            <ScrollView>
               <DisplayThoughts />
-              {/* </SafeAreaView> */}
             </ScrollView>
-          </SafeAreaView>
-          </ScrollView>
+        </View>
 
       </View>
   )

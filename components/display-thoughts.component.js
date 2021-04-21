@@ -41,10 +41,9 @@ export default class DisplayThoughts extends Component {
   render() {
     
     return (
-      <View
-      style={ styles.thoughtsStyle }>
+      <View>
 
-        <ScrollView>
+        {/* <ScrollView> */}
           { this.state.thoughts.slice().reverse().map(
             item => (
               <View key={item._id}>
@@ -53,7 +52,7 @@ export default class DisplayThoughts extends Component {
               </View>
             ))
           }
-        </ScrollView>
+        {/* </ScrollView> */}
 
       </View>
     );

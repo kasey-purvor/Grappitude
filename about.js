@@ -7,7 +7,7 @@ When the bar is filled up, your user level will increase. Each level requires 10
 When you reach level 100... just keep on being grateful :)\n
 Struggling to think of a thought?  Hit the 'Inspire Me' button for some inspiration!\n\n
 Happy Grappituding!\n\n
-`
+Creators:\n`
 
 
 export default myText;

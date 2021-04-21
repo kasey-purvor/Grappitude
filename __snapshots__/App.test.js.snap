@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders correctly 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "margin": 15,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "marginTop": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      What are you grateful for today?
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      onChangeText={[Function]}
+      placeholder="Type your thought here"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "#B9DEA4",
+          "borderWidth": 3,
+          "height": 40,
+          "marginLeft": 75,
+          "marginRight": 75,
+          "marginTop": 10,
+          "textAlign": "center",
+          "width": 200,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityState={Object {}}
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "margin": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "black",
+              },
+            ]
+          }
+        >
+          Submit
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <Text
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Gratitude Level:
+      0
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#CFCFCF",
+          "borderColor": "#CFCFCF",
+          "borderRadius": 5,
+          "borderWidth": 15,
+          "height": 30,
+        },
+        Object {
+          "width": 0,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "margin": 15,
+        "marginTop": 40,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={Object {}}
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "margin": 8,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "blue",
+              },
+            ]
+          }
+        >
+          Inspire Me
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "margin": 15,
+          "marginBottom": 40,
+          "marginTop": 40,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "marginBottom": 40,
+            "marginTop": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "marginBottom": 40,
+            }
+          }
+        >
+          <RCTScrollView
+            data={Array []}
+            disableVirtualization={false}
+            getItem={[Function]}
+            getItemCount={[Function]}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            onContentSizeChange={[Function]}
+            onEndReachedThreshold={2}
+            onLayout={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            updateCellsBatchingPeriod={50}
+            viewabilityConfigCallbackPairs={Array []}
+            windowSize={21}
+          >
+            <View />
+          </RCTScrollView>
+        </View>
+      </Text>
+    </View>
+  </View>
+</View>
+`;

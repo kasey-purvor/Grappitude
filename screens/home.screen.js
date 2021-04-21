@@ -1,20 +1,21 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Text, Button, TextInput, View, StyleSheet, Image } from 'react-native';
+import { FlatList, Text, Button, TouchableOpacity, TextInput, View, StyleSheet, Image } from 'react-native';
 import axios from "axios";
 
-import styles from './design.component.style';
+import styles from '../components/design.component.style';
 
-import AboutMe from "./about-me.component";
-import CreateThought from "./create-thought.component";
-import InspireMe   from "./inspire-me.component";
-import ProgressBar from "./progress-bar.component";
-import Level from "./level.component";
-import DisplayThoughts from "./display-thoughts.component";
+import AboutMe from "./about-me.screen";
+import CreateThought from "../components/create-thought.component";
+import InspireMe   from "../components/inspire-me.component";
+import ProgressBar from "../components/progress-bar.component";
+import Level from "../components/level.component";
+import DisplayThoughts from "../components/display-thoughts.component";
+import { useNavigation } from '@react-navigation/native';
 
-
-const AppContainer = () => {
+const HomeScreen = () => {
   const [progressBarWidth, setProgressBarWidth] = useState(0)
   const [healthLevel, setHealthLevel] = useState(0)
+  const navigation = useNavigation()
 
   const getThoughtsLength = () => {
     axios.get('http://localhost:5000/thoughts')
@@ -39,27 +40,21 @@ const AppContainer = () => {
     // But I'm leaving it as a reminder that we *can*
     getThoughtsLength()
   }
-  
+
   return (
       <View>
         <Image source={require("../assets/header.png")} style={styles.image}/>
           <Text style={styles.title}>
            Grappitude
           </Text>
-        <AboutMe />
+        <TouchableOpacity onPress={() => navigation.navigate("About Grappitude")}><Text>- About this app -</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("My Thoughts")}><Text>- View my thoughts -</Text></TouchableOpacity>
         <CreateThought afterThoughtCreated={afterThoughtCreated}/>
         <Level healthLevel={healthLevel}/>
         <ProgressBar progressBarWidth={progressBarWidth}/>
         <InspireMe />
-        <View 
-          style={{
-          alignSelf: "center",
-          marginBottom: 40
-          }}>
-        <DisplayThoughts />
-        </View>
       </View>
   )
 }
 
-export default AppContainer;
+export default HomeScreen;

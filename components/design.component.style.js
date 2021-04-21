@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
   buttonview: {
     marginTop: 10,
-    backgroundColor: '#EFCABA',
+    backgroundColor: '#F7C9B6',
     width: 150,
     marginLeft: '30%',
     borderWidth: 1,
@@ -37,7 +37,7 @@ export default StyleSheet.create({
   titlequestion: {
     textAlign: 'center',
      fontSize: 45,
-     color: '#EFCABA',
+     color: '#F7C9B6',
      textShadowColor: '#6EC0D4',
      textShadowOffset: {width: -1, height: 2},
      textShadowRadius: 0,
@@ -100,7 +100,7 @@ export default StyleSheet.create({
   },
 
   thoughtsbackground: {
-    backgroundColor: '#EFCABA'
+    backgroundColor: '#F7C9B6'
   },
 
   thoughtstext: {

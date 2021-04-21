@@ -21,6 +21,18 @@ export default class DisplayThoughts extends Component {
     });
   }
 
+  timeCheck = (timeString) => {
+    if(timeString === "23") {
+      return "00"
+    } else {
+      if(Number(timeString) < 10) {
+        return `0${(Number(timeString) + 1).toString()}`
+      } else {
+      return (Number(timeString) + 1).toString()
+    }
+  }
+}
+
   render() {
 
     return (
@@ -40,7 +52,7 @@ export default class DisplayThoughts extends Component {
             }}>{item["thought"]}{"\n"}
             {item["createdAt"].slice(8,10)}
             {item["createdAt"].slice(4,8)}
-            {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
+            {item["createdAt"].slice(0,4)} {this.timeCheck(item["createdAt"].slice(11,13))}{item["createdAt"].slice(13,16)}</Text>}
             keyExtractor={(item, index) => {return index.toString()}}
           />
       </View>

@@ -21,43 +21,41 @@ export default class DisplayThoughts extends Component {
     });
   }
 
+  timeCheck = (timeString) => {
+    if(timeString === "23") {
+      return "00"
+    } else {
+      if(Number(timeString) < 10) {
+        return `0${(Number(timeString) + 1).toString()}`
+      } else {
+      return (Number(timeString) + 1).toString()
+    }
+  }
+}
+
   render() {
 
     return (
       <View
-      style={{
-        marginTop: 40,
-        margin: 15,
-        marginBottom: 40
-      }}>
-        <Text
         style={{
-          textAlign: 'center',
-          marginTop: 20,
-          marginBottom: 40
+          marginTop: 40,
+          margin: 10,
+          marginBottom: 0
         }}>
+        {this.getThoughts()}
 
-              {this.getThoughts()}
-
-              <View style={{
-                marginBottom: 40
-              }}>
-              <FlatList
-                data={this.state.thoughts.slice().reverse()}
-                renderItem={({item}) => <Text style={{
-                  textAlign: "center",
-                  alignItems: "center",
-                  alignSelf: "center",
-                  marginBottom: 40
-                }}>{item["thought"]}{"\n"}
-                {item["createdAt"].slice(8,10)}
-                {item["createdAt"].slice(4,8)}
-                {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
-                keyExtractor={(item, index) => {return index.toString()}}
-              />
-              </View>
-        </Text>
-     </View>
+          <FlatList
+            data={this.state.thoughts.slice().reverse()}
+            renderItem={({item}) => <Text style={{
+              textAlign: "center",
+              marginBottom: 10
+            }}>{item["thought"]}{"\n"}
+            {item["createdAt"].slice(8,10)}
+            {item["createdAt"].slice(4,8)}
+            {item["createdAt"].slice(0,4)} {this.timeCheck(item["createdAt"].slice(11,13))}{item["createdAt"].slice(13,16)}</Text>}
+            keyExtractor={(item, index) => {return index.toString()}}
+          />
+      </View>
     );
   }
 }

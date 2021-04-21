@@ -1,6 +1,5 @@
 import React,  { Component } from 'react';
-import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
-
+import { Text, Button, TextInput, View, StyleSheet, Alert } from 'react-native';
 
 export default class InspireMe extends Component {
   constructor(props) {
@@ -19,7 +18,7 @@ export default class InspireMe extends Component {
       const positiveText = positiveQuote.text
       const positiveAuthor = positiveQuote.author
 
-      alert(`${positiveText}` + ` - ${positiveAuthor}`)
+      Alert.alert(`${positiveText}` + ` - ${positiveAuthor}`)
     })
     .catch((error) => {
       console.error(error);

@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import { Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { Alert, Text, Button, TextInput, View, StyleSheet } from 'react-native';
 import myText from './../about.js'
 
 export default class AboutMe extends Component {
@@ -9,7 +9,11 @@ export default class AboutMe extends Component {
   
   onSubmit(e) {
     e.preventDefault();
-    alert(myText);
+    Alert.alert(
+      'About Grappitude', 
+      myText
+    )
+    ;
   }
 
   render() {

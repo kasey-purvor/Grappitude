@@ -2,6 +2,7 @@ import React,  { Component } from 'react';
 import { FlatList, ScrollView, Text, View } from 'react-native';
 import styles from './design.component.style';
 import axios from "axios";
+import sampleData from "./sampleData"
 
 export default class DisplayThoughts extends Component {
    constructor(props) {
@@ -37,26 +38,18 @@ export default class DisplayThoughts extends Component {
     
     return (
       <View>
-
-        {/* <ScrollView> */}
+          {}
           { this.state.thoughts.slice().reverse().map(
             item => (
               <View key={item._id}>
+                {/* {date = updateDate(item.createdAt)} */}
                 <Text style={ styles.thoughtsText }> {item.thought}</Text>
                 <Text style={ styles.thoughtsText }> {item.createdAt}</Text>
+                {/* <Text style={ styles.thoughtsText }> {updateDate(item.createdAt)}</Text> */}
               </View>
             ))
           }
-          {/* { this.state.thoughts.slice().reverse().map(
-            item => (
-              <View key={item._id}>
-                <Text style={ styles.thoughtsText }> {item.thought}</Text>
-                <Text style={ styles.thoughtsText }> {item.createdAt}</Text>
-              </View>
-            ))
-          } */}
-        {/* </ScrollView> */}
-
+          { }
       </View>
     );
   }

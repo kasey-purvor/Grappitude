@@ -28,28 +28,23 @@ export default class DisplayThoughts extends Component {
   }
 
   updateDate = (date) => {
-    return new Date (date); // outputs: Thu Apr 15 2021 16:39:32 GMT+0100 (British Summer Time)
-    // let date = new Date ("2021-04-15T15:39:32.113Z");
-    // return date.toLocaleString('en-GB', { timeZone: 'UTC' })
-
+    let cleanDate = new Date (date); // outputs: Thu Apr 15 2021 16:39:32 GMT+0100 (British Summer Time)
+    let dateString = String(cleanDate)
+    return dateString.slice(0,24)
   }
 
   render() {
     
     return (
       <View>
-          {}
           { this.state.thoughts.slice().reverse().map(
             item => (
               <View key={item._id}>
-                {/* {date = updateDate(item.createdAt)} */}
                 <Text style={ styles.thoughtsText }> {item.thought}</Text>
-                <Text style={ styles.thoughtsText }> {item.createdAt}</Text>
-                {/* <Text style={ styles.thoughtsText }> {updateDate(item.createdAt)}</Text> */}
+                <Text style={ styles.thoughtsText }> {this.updateDate(item.createdAt)}</Text>
               </View>
             ))
           }
-          { }
       </View>
     );
   }

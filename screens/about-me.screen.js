@@ -6,8 +6,10 @@ import styles from '../components/design.component.style';
 
 const AboutMeScreen = () => {
    return (
+
      <View>
        <Image source={require("../assets/header.png")} style={styles.image}/>
+
      <Text>{myText}</Text>
      <Text style={{color: 'blue'}}
       onPress={() => Linking.openURL('https://github.com/AdamP2000')}>

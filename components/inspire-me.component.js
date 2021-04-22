@@ -18,14 +18,18 @@ export default class CreateThought extends Component {
     .then((json) => {
       const positiveQuote = json[(Math.floor(Math.random()*json.length))];
       const positiveText = positiveQuote.text
-      const positiveAuthor = positiveQuote.author
+      let positiveAuthor = ""
+      if(positiveQuote.author === null) {
+        positiveAuthor = "Unknown"
+      } else {
+        positiveAuthor = positiveQuote.author
+      }
 
-      Alert.alert(`${positiveText}` + ` - ${positiveAuthor}`)
+      Alert.alert(`${positiveText}\n\n${positiveAuthor}`)
     })
     .catch((error) => {
       console.error(error);
     });
-
   }
 
   render() {
@@ -33,6 +37,7 @@ export default class CreateThought extends Component {
      <View style={styles.buttonview}>
        <Button
          title="Inspire Me"
+         color='hotpink'
          onPress={this.onSubmit}
          color='#6EC0D4'
          />

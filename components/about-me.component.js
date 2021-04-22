@@ -1,16 +1,16 @@
 import React,  { Component } from 'react';
-import { Alert, Text, Button, TextInput, View, StyleSheet } from 'react-native';
+import { Alert, Text, Button, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import myText from './../about.js'
 import styles from './design.component.style';
 export default class AboutMe extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
   }
-  
+
   onSubmit(e) {
     e.preventDefault();
     Alert.alert(
-      'About Grappitude', 
+      'About Grappitude',
       myText
     )
     ;
@@ -18,13 +18,15 @@ export default class AboutMe extends Component {
 
   render() {
    return (
-     <View
-     style={styles.buttonviewtwo}>
-       <Button
+     <View style={{
+       marginTop: 40,
+       margin: 15
+     }}>
+       <TouchableOpacity
          title="About"
-         color='#6EC0D4'
-         onPress={this.onSubmit}
-         />
+         color='green'
+         onPress={this.onSubmit}><Text>About</Text>
+        </TouchableOpacity>
      </View>
    );
  }

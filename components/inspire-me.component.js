@@ -34,12 +34,13 @@ export default class CreateThought extends Component {
 
   render() {
    return (
-     <View style={styles.buttonview}>
+     <View style={styles.inspirebutton}>
        <Button
          title="Inspire Me"
          color='hotpink'
          onPress={this.onSubmit}
          color='#6EC0D4'
+         fontFamily='Comfortaa_300Light'
          />
      </View>
    );

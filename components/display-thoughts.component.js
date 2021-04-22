@@ -1,6 +1,7 @@
 import React,  { Component } from 'react';
 import { FlatList, Text, View } from 'react-native';
 import axios from "axios";
+import styles from './design.component.style';
 
 export default class DisplayThoughts extends Component {
    constructor(props) {
@@ -37,25 +38,23 @@ export default class DisplayThoughts extends Component {
 
     return (
       <View
-        style={{
-          marginTop: 40,
-          margin: 10,
-          marginBottom: 0
-        }}>
-        {this.getThoughts()}
-
-          <FlatList
-            data={this.state.thoughts.slice().reverse()}
-            renderItem={({item}) => <Text style={{
-              textAlign: "center",
-              marginBottom: 10
-            }}>{item["thought"]}{"\n"}
-            {item["createdAt"].slice(8,10)}
-            {item["createdAt"].slice(4,8)}
-            {item["createdAt"].slice(0,4)} {this.timeCheck(item["createdAt"].slice(11,13))}{item["createdAt"].slice(13,16)}</Text>}
-            keyExtractor={(item, index) => {return index.toString()}}
-          />
-      </View>
+      style={styles.thoughtsbackground}>
+        <Text>
+              {this.getThoughts()}
+              <View>
+              <FlatList
+                data={this.state.thoughts.slice().reverse()}
+                renderItem={({item}) => 
+                <Text style={styles.thoughtstext}>
+                {item["thought"]}{"\n"}
+                {item["createdAt"].slice(8,10)}
+                {item["createdAt"].slice(4,8)}
+                {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
+                keyExtractor={(item, index) => {return index.toString()}}
+              />
+              </View>
+        </Text>
+     </View>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React,  { Component } from 'react';
 import { Alert, Text, Button, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import myText from './../about.js'
-
+import styles from './design.component.style';
 export default class AboutMe extends Component {
   constructor(props) {
     super(props);
@@ -18,12 +18,10 @@ export default class AboutMe extends Component {
 
   render() {
    return (
-     <View
-     style={{
+     <View style={{
        marginTop: 40,
        margin: 15
      }}>
-
        <TouchableOpacity
          title="About"
          color='green'

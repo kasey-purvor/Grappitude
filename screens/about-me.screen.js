@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet, Linking, SafeAreaView } from 'react-native';
+import { Text, View, StyleSheet, Linking } from 'react-native';
 import myText from './../about.js'
 
 const AboutMeScreen = () => {
    return (
-     <SafeAreaView style={{
+     <View style={{
        margin: 20
      }}>
      <Text>{myText}</Text>
@@ -32,7 +32,7 @@ const AboutMeScreen = () => {
            onPress={() => Linking.openURL('https://github.com/ianmcnicholas')}>
              Ian McNicholas
            </Text>
-     </SafeAreaView>
+     </View>
    );
 }
 

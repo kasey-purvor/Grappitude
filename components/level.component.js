@@ -9,7 +9,7 @@ const Level = ({ healthLevel }) => {
       <View>
         <Text
         style={styles.gratlevel}>
-          Gratitude Level:{healthLevel}
+          Gratitude Level: {healthLevel}
         </Text>
       </View>
     )

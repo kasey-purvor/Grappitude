@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import { FlatList, Text, View, SafeAreaView } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import axios from "axios";
 import styles from './design.component.style';
 
@@ -37,7 +37,7 @@ export default class DisplayThoughts extends Component {
   render() {
 
     return (
-      <SafeAreaView
+      <View
       style={styles.thoughtsbackground}>
         <Text>
               {this.getThoughts()}
@@ -54,7 +54,7 @@ export default class DisplayThoughts extends Component {
               />
               </View>
         </Text>
-     </SafeAreaView>
+     </View>
     );
   }
 }

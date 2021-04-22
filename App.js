@@ -20,13 +20,6 @@ const App = () => {
       <Tab.Screen name="About" component={AboutMeScreen} />
     </Tab.Navigator>
     </NavigationContainer>
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="Home" component={HomeScreen} />
-    //     <Stack.Screen name="About Grappitude" component={AboutMeScreen} />
-    //     <Stack.Screen name="My Thoughts" component={ViewThoughtsScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
   );
 }
 

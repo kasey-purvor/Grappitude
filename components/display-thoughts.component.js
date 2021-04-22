@@ -47,9 +47,13 @@ export default class DisplayThoughts extends Component {
                 renderItem={({item}) =>
                 <Text style={styles.thoughtstext}>
                 {item["thought"]}{"\n"}
-                {item["createdAt"].slice(8,10)}
+                {"\n"}
+                <Text style={styles.date}>{item["createdAt"].slice(8,10)}
                 {item["createdAt"].slice(4,8)}
-                {item["createdAt"].slice(0,4)} {item["createdAt"].slice(11,16)}</Text>}
+                {item["createdAt"].slice(0,4)} 
+                {/* {item["createdAt"].slice(11,16)} */}
+                </Text>
+                <Text style={styles.dot}>{"\n"} .</Text></Text>}
                 keyExtractor={(item, index) => {return index.toString()}}
               />
               </View>

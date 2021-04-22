@@ -1,14 +1,20 @@
 import { StyleSheet } from 'react-native';
-import {useFonts} from "@expo-google-fonts/comfortaa";
+import { useFonts, Comfortaa_300Light } from '@expo-google-fonts/comfortaa';
 
 export default StyleSheet.create({
+
+  homescreen:{
+    backgroundColor: '#ECEAC4',
+    height: 1000
+  },
+
   image: {
    height: 100, 
    width: 500
   },
 
-  buttonview: {
-    marginTop: 10,
+  inspirebutton: {
+    marginTop: 70,
     backgroundColor: '#F7C9B6',
     width: 150,
     marginLeft: '30%',
@@ -38,7 +44,8 @@ export default StyleSheet.create({
      textShadowOffset: {width: -1, height: 2},
      textShadowRadius: 0,
      marginTop: 0,
-     fontFamily: 'comfortaa'
+     fontFamily: 'Comfortaa_300Light',
+     marginTop: 80
   },
 
   thoughtinput: {
@@ -52,20 +59,22 @@ export default StyleSheet.create({
     marginLeft: 40,
     color:'#4D9DB2',
     fontSize: 15,
-    marginTop: 30
+    marginTop: 60
   },
 
   gratlevel: {
+    fontFamily: 'Comfortaa_300Light',
     fontSize: 30,
     textAlign: 'center',
     color: '#EFCABA',
     textShadowColor: '#6EC0D4',
     textShadowOffset: {width: -1, height: 1},
-    textShadowRadius: 0
+    textShadowRadius: 0,
+    marginTop: 50
   },
 
   bar: {
-        marginTop: 20,
+        marginTop: 30,
         height: 40,
         width: '100%',
         borderRadius: 10,
@@ -80,7 +89,7 @@ export default StyleSheet.create({
         borderRadius: 5,
         borderColor: '#EFCABA',
         position: 'absolute',
-        marginTop: 25
+        marginTop: 35
       },
     
   mainview: {
@@ -97,15 +106,64 @@ export default StyleSheet.create({
   },
 
   thoughtsbackground: {
-    backgroundColor: '#F7C9B6'
+    backgroundColor: '#F2F1CE'
   },
 
   thoughtstext: {
     color:'#4D9DB2',
-    fontSize: 15,
+    fontSize: 25,
     margin: 10,
     textAlign: 'center',
+    padding: 10,
+    fontFamily: 'Comfortaa_300Light'
   },
+
+  date: {
+    fontSize: 18
+  },
+
+  dot: {
+    fontSize: 90,
+    color: '#EFCABA',
+    textShadowColor: '#6EC0D4',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 0,
+  },
+
+  navbar: {
+    color: '#F5F3C8'
+  },
+  
+  aboutmeview: {
+    backgroundColor: '#ECEAC4',
+    height: 1000
+  },
+
+  aboutmetext: {
+    color:'#4D9DB2',
+    fontSize: 16,
+    marginTop: 10,
+    padding: 20,
+    textAlign: 'center'
+    },
+
+  creditstitle: {
+    fontSize: 20,
+    color:'#4D9DB2',
+    marginTop: 0,
+    marginLeft: 16,
+    textAlign: 'center',
+    fontWeight:'bold' 
+  },
+
+  aboutmecredits: {
+    color:'#4D9DB2',
+    fontSize: 16,
+    padding: 3,
+    marginLeft: 17,
+    textDecorationLine: 'underline',
+    textAlign: 'center'
+    },
 
   test: {
     alignContent: 'center',

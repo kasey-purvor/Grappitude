@@ -18,10 +18,7 @@ export default class AboutMe extends Component {
 
   render() {
    return (
-     <View style={{
-       marginTop: 40,
-       margin: 15
-     }}>
+     <View>
        <TouchableOpacity
          title="About"
          color='green'

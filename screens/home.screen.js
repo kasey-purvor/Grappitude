@@ -42,7 +42,7 @@ const HomeScreen = () => {
   }
 
   return (
-      <View>
+      <View style={styles.homescreen}>
       {getThoughtsLength()}
         <Image source={require("../assets/header.png")} style={styles.image}/>
         <CreateThought afterThoughtCreated={afterThoughtCreated}/>

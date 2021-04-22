@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, Text, View, SafeAreaView } from 'react-native';
 import axios from "axios";
 import styles from './design.component.style';
 
@@ -37,14 +37,14 @@ export default class DisplayThoughts extends Component {
   render() {
 
     return (
-      <View
+      <SafeAreaView
       style={styles.thoughtsbackground}>
         <Text>
               {this.getThoughts()}
               <View>
               <FlatList
                 data={this.state.thoughts.slice().reverse()}
-                renderItem={({item}) => 
+                renderItem={({item}) =>
                 <Text style={styles.thoughtstext}>
                 {item["thought"]}{"\n"}
                 {item["createdAt"].slice(8,10)}
@@ -54,7 +54,7 @@ export default class DisplayThoughts extends Component {
               />
               </View>
         </Text>
-     </View>
+     </SafeAreaView>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Text, Button, TouchableOpacity, TextInput, View, StyleSheet, Image } from 'react-native';
+import { FlatList, Text, SafeAreaView, Button, TouchableOpacity, TextInput, View, StyleSheet, Image } from 'react-native';
 import axios from "axios";
 
 import styles from '../components/design.component.style';
@@ -42,7 +42,7 @@ const HomeScreen = () => {
   }
 
   return (
-      <View>
+      <SafeAreaView>
       {getThoughtsLength()}
         <Image source={require("../assets/header.png")} style={styles.image}/>
           <Text style={styles.title}>
@@ -52,7 +52,7 @@ const HomeScreen = () => {
         <Level healthLevel={healthLevel}/>
         <ProgressBar progressBarWidth={progressBarWidth}/>
         <InspireMe />
-      </View>
+      </SafeAreaView>
   )
 }
 

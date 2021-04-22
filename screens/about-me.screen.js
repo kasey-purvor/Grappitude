@@ -5,7 +5,7 @@ import myText from './../about.js'
 const AboutMeScreen = () => {
    return (
      <View style={{
-       padding: 20
+       margin: 20
      }}>
      <Text>{myText}</Text>
      <Text style={{color: 'blue'}}

@@ -48,8 +48,6 @@ const HomeScreen = () => {
           <Text style={styles.title}>
            Grappitude
           </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("About Grappitude")}><Text>- About this app -</Text></TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("My Thoughts")}><Text>- View my thoughts -</Text></TouchableOpacity>
         <CreateThought afterThoughtCreated={afterThoughtCreated}/>
         <Level healthLevel={healthLevel}/>
         <ProgressBar progressBarWidth={progressBarWidth}/>

@@ -44,7 +44,7 @@ export default class DisplayThoughts extends Component {
               <View>
               <FlatList
                 data={this.state.thoughts.slice().reverse()}
-                renderItem={({item}) => 
+                renderItem={({item}) =>
                 <Text style={styles.thoughtstext}>
                 {item["thought"]}{"\n"}
                 {item["createdAt"].slice(8,10)}

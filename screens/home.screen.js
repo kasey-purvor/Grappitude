@@ -45,9 +45,6 @@ const HomeScreen = () => {
       <View>
       {getThoughtsLength()}
         <Image source={require("../assets/header.png")} style={styles.image}/>
-          <Text style={styles.title}>
-           Grappitude
-          </Text>
         <CreateThought afterThoughtCreated={afterThoughtCreated}/>
         <Level healthLevel={healthLevel}/>
         <ProgressBar progressBarWidth={progressBarWidth}/>

@@ -1,14 +1,10 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
+import {useFonts} from "@expo-google-fonts/comfortaa";
 
 export default StyleSheet.create({
-  title: {
-    position: 'absolute',
-    justifyContent: 'center', 
-    alignItems: 'center'
-  },
-
   image: {
-    width: '100%',
+   height: 100, 
+   width: 500
   },
 
   buttonview: {
@@ -41,7 +37,8 @@ export default StyleSheet.create({
      textShadowColor: '#6EC0D4',
      textShadowOffset: {width: -1, height: 2},
      textShadowRadius: 0,
-     marginTop: 0
+     marginTop: 0,
+     fontFamily: 'comfortaa'
   },
 
   thoughtinput: {

@@ -1,5 +1,3 @@
-Plan for the README:
-
 # Grappitude
 ## By Team Panda
 [Joanna Brigham](https://github.com/JLBrigham) | [Edeman George](https://github.com/eds-101) | [Laura Keen](https://github.com/Laura-Keen) | [Ian McNicholas](https://github.com/ianmcnicholas) | [Adam Phillips](https://github.com/AdamP2000) | [Kasey Purvor](https://github.com/kasey-purvor)

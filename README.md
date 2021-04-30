@@ -6,7 +6,7 @@
 
 Grappitude is a mobile app developed using React Native.  The purpose of the app is to encourage a user to document their grateful thoughts on a daily basis.  The app has been gamified with the use of a progress-bar and numerical level to prompt consistent use.
 
-The app was developed by a team of 6 students at [Makers Academy](www.makers.tech), over the course of 2 weeks as a final project.
+The app was developed by a team of 6 students at [Makers Academy](https://www.makers.tech), over the course of 2 weeks as a final project.
 
 ### Contents
 [Planning](#planning) | [Technologies](#technologies) | [Approach](#approach) | [Summary](#summary) | [Demo of app](#demo-of-app)

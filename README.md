@@ -1,6 +1,6 @@
 Plan for the README:
 
-Introduction to final project, with a link to everyone's github account.
+Introduction to final project, with a link to everyone's github account.  What does the app actually do and why?
 
 Details on the planning stage - multiple ideas, advanced a couple of them to discuss how the coding would work.  Settled on one with an interesting code feature (power bar).
 Decided on javascript and REACT NATIVE as this would be a challenge for us all.

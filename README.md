@@ -1,5 +1,10 @@
 Plan for the README:
 
+# Grappitude
+## By Team Panda
+[Joanna Brigham](https://github.com/JLBrigham) | [Edeman George](https://github.com/eds-101) | [Laura Keen](https://github.com/Laura-Keen) | [Ian McNicholas](https://github.com/ianmcnicholas) | [Adam Phillips](https://github.com/AdamP2000) | [Kasey Purvor](https://github.com/kasey-purvor)
+### A Makers Academy Final Project
+
 Introduction to final project, with a link to everyone's github account.  What does the app actually do and why?
 
 Details on the planning stage - multiple ideas, advanced a couple of them to discuss how the coding would work.  Settled on one with an interesting code feature (power bar).
@@ -14,7 +19,7 @@ What went well?
   Self learning.
   Developed MVP fluidly
   Knowledge sharing
-  
+
 Things to improve upon
   Code reviews - we are still in the headspace where we want to merge as a team.
   Testing - more of an afterthought.
@@ -28,5 +33,3 @@ https://user-images.githubusercontent.com/75983723/116526287-586b7280-a8d1-11eb-
 https://user-images.githubusercontent.com/75983723/116526370-7042f680-a8d1-11eb-9b1f-53efa073a0ae.mov
 
 https://user-images.githubusercontent.com/75983723/116526427-7fc23f80-a8d1-11eb-9e84-9e20928606fd.mov
-
-

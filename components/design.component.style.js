@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
 
   image: {
-   height: 100, 
+   height: 100,
    width: 500
   },
 
@@ -63,14 +63,14 @@ export default StyleSheet.create({
   },
 
   gratlevel: {
-    fontFamily: 'Comfortaa_300Light',
     fontSize: 30,
     textAlign: 'center',
     color: '#EFCABA',
     textShadowColor: '#6EC0D4',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 0,
-    marginTop: 50
+    marginTop: 50,
+    fontFamily: 'Comfortaa_300Light'
   },
 
   bar: {
@@ -81,7 +81,7 @@ export default StyleSheet.create({
         borderWidth: 5,
         borderColor: '#6EC0D4'
       },
-    
+
   filler: {
         height: 30,
         // width: '50%',
@@ -91,7 +91,7 @@ export default StyleSheet.create({
         position: 'absolute',
         marginTop: 35
       },
-    
+
   mainview: {
       marginTop: 1,
       margin: 15
@@ -133,7 +133,7 @@ export default StyleSheet.create({
   navbar: {
     color: '#F5F3C8'
   },
-  
+
   aboutmeview: {
     backgroundColor: '#ECEAC4',
     height: 1000
@@ -153,7 +153,7 @@ export default StyleSheet.create({
     marginTop: 0,
     marginLeft: 16,
     textAlign: 'center',
-    fontWeight:'bold' 
+    fontWeight:'bold'
   },
 
   aboutmecredits: {

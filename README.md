@@ -9,7 +9,7 @@ Grappitude is a mobile app developed using React Native.  The purpose of the app
 The app was developed by a team of 6 students at [Makers Academy](https://www.makers.tech), over the course of 2 weeks as a final project.
 
 ### Contents
-[Planning](#planning) | [Technologies](#technologies) | [Approach](#approach) | [Summary](#summary) | [Demo of app](#demo-of-app)
+[Original Instructions](#original-insructions) | [Planning](#planning) | [Technologies](#technologies) | [Approach](#approach) | [Summary](#summary) | [Demo of app](#demo-of-app)
 
 ### Planning
 
